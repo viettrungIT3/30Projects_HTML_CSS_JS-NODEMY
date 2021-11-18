@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+	--primary-color: #4daf54;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	height: 100vh;
+	background-image: linear-gradient(to right, #4daf54, #3d8880);
+	overflow: hidden;
+}
+
+
+.card {
+    margin: 120px auto;
+	width: 320px;
+	height: 400px;
+	background-color: #272d40;
+	border-radius: 15px;
+	padding: 15px 20px 0;
+	color: white;
+}
+
+.card__header {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__header i {
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card__img {
+	width: 90%;
+    margin: auto;
+	transition: 0.5s;
+}
+
+.card__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.card:hover .card__img {
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card__title, .card__price{
+    font-size:25px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card__title {
+    color: var(--primary-color);
+}
+
+.card:hover .card__title {
+	transform: translate(-40px, -72px);
+}
+
+.card:hover .card__price {
+	transform: translate(-112px, -72px);
+}
+
+.card__size, .card__color{
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.card__size {
+    margin-top: 150px;
+}
+
+.card__size h3, .card__color h3{
+    margin-right: 2px;
+}
+
+.card__size--item{
+    margin: 0 4px;
+    padding: 1px 10px;
+    color: #000;
+    background: #dadada;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card__color span{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.card__color--green{
+    background: green;
+}
+
+.card__color--red{
+    background: red;
+}
+
+.card__color--black{
+    background: black;
+}
+
+.card__action{
+    margin-top: 5px;
+}
+
+.card__action--btn{
+    padding: 10px 20px;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.card__size, .card__color, .card__action {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+}
+
+.card:hover .card__size,
+.card:hover .card__color,
+.card:hover .card__action {
+    visibility: visible;
+    opacity: 100;
+}
+
+.card:hover .card__size {
+    margin-top: -40px;
+}
