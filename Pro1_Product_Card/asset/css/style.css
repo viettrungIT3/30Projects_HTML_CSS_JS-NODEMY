@@ -96,6 +96,7 @@ body {
     background: #dadada;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.25s;
 }
 
 .card__color span{
@@ -130,6 +131,12 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+    margin-right: 5px;
+    transition: 0.25s;
+}
+
+.card__action--btn:hover{
+    transform: scale(1.1);
 }
 
 .card__size, .card__color, .card__action {
