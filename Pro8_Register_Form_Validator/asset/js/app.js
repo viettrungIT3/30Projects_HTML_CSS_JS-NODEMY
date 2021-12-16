@@ -94,3 +94,14 @@ form.addEventListener('submit', function (e) {
         checkPasswordsMatch(password, password2)
     }
 })
+
+
+
+
+
+
+
+
+
+
+
