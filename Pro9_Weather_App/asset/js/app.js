@@ -23,7 +23,7 @@ function changeWeatherUI(data) {
 
         time.innerHTML = new Date().toLocaleString();
 
-        const temp = Math.round(data.main.temp - 273.15);
+        const temp = Math.round(data.main.temp);
         temperature.innerHTML = temp;
         console.log(temp);
 
@@ -52,7 +52,7 @@ search.addEventListener('keyup', (e) => {
 
 async function getWeather(input) {
 
-    apiURL = `http://api.openweathermap.org/data/2.5/weather?appid=73af23c1d247a435aa8dce19fc83c958&q=${input}`
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=73af23c1d247a435aa8dce19fc83c958`
 
     let data = await fetch(apiURL).then(res => res.json());
     console.log(data);
