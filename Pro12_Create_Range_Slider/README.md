@@ -1,0 +1,1 @@
+Link demo: [Create Range Slider](https://viettrungit3.github.io/30Projects_HTML_CSS_JS-NODEMY/Pro12_Create_Range_Slider/)  
